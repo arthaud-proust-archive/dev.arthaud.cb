@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB Card - Sandbox</title>
+    <script src="cb-card.js"></script>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="/src/card.css">
+</head>
+<body>
+    <main>
+        <div class="cb-card" name="cb1" id="cb1">
+            <div class="cb-card-inner">
+                <div class="cb-card-frontface">
+                    <div class="cb-card-code">
+                        <input class="cb-card-code-input" data-n="1" placeholder="0000" type="text" maxlength="4">
+                        <input class="cb-card-code-input" data-n="2" placeholder="0000" type="text" maxlength="4">
+                        <input class="cb-card-code-input" data-n="3" placeholder="0000" type="text" maxlength="4">
+                        <input class="cb-card-code-input" data-n="4" placeholder="0000" type="text" maxlength="4">
+                    </div>
+                    <div class="cb-card-expiration">
+                        <input class="cb-card-expiration-input" data-n="1" placeholder="01" type="text" maxlength="2">
+                        <span>/</span>
+                        <input class="cb-card-expiration-input" data-n="2" placeholder="01" type="text" maxlength="2">
+                    </div>
+                    <input class="cb-card-person" placeholder="proust Arthaud" type="text" maxlength="30">
+                </div>
+                <div class="cb-card-backface">
+                    <input class="cb-card-crypto" placeholder="000" maxlength="3">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
