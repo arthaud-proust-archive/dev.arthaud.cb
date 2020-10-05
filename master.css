@@ -3,10 +3,62 @@ body {
     margin: 0;
 }
 main {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#output-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#output-button {
+    background: #f0f0f0 !important;
+    border:0;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+#output-json:not(:empty) {
+    font-size: 15px;
+    background: #333;
+    color: #9c6376;
+    max-width: 80vw;
+    line-break: normal;
+    padding: 15px 20px 15px 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    -o-user-select: all;
+}
+
+#github-link {
+    background: #f0f0f0 !important;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
 }
