@@ -1,5 +1,5 @@
 window.onload = function() {
-    window.cb = new CB('#example', 'example');
+    window.cb = new CB({parent:'#example', id:'example'});
     window.cb.init();
 
     document.querySelector('#output-button').addEventListener('click', function(e) {

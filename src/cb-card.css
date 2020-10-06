@@ -5,13 +5,13 @@
 /* By Arthaud Proust */
 
 
-div.cb-box {
+.cbbox {
     padding: 50px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-div.cb-card {
+.cbc {
     position: relative;
     display: block;
     height: 200px;
@@ -20,7 +20,7 @@ div.cb-card {
     perspective: 600px; 
 }
 
-span.cb-tip {
+span.cbtip {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color: #C0C0C0;
@@ -28,7 +28,7 @@ span.cb-tip {
     user-select: none;
 }
 
-.cb-card-inner {
+.cbcinner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -41,12 +41,16 @@ span.cb-tip {
     -o-transition: transform 1s;
 }
 
-.cb-card.turn .cb-card-inner {
+.cbc.turn .cbcinner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 
-.cb-card-frontface, .cb-card-backface {
+.cbcff, .cbcbf {
     cursor: pointer;
     position: absolute;
     width: 100%;
@@ -60,10 +64,10 @@ span.cb-tip {
     -o-border-radius: 20px;
     box-shadow: hsla(0, 0%, 24%, 0.60) 0px 5px 25px;
 }
-.cb-card-frontface {
+.cbcff {
     background: linear-gradient(190deg,#e66465, rgba(255,0,0,0) 70.71%), linear-gradient(-50deg, #B45EB7, #2C59ED), linear-gradient(300deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
-div.cb-card-frontface::after {
+.cbcff::after {
     position: absolute;
     content: ' ';
     display: block;
@@ -79,7 +83,7 @@ div.cb-card-frontface::after {
     -o-border-radius: 5px;
 }
 
-div.cb-card-backface {
+.cbcbf {
     transform: rotateY(180deg) translateZ(1px);
     -webkit-transform: rotateY(180deg) translateZ(1px);
     -moz-transform: rotateY(180deg) translateZ(1px);
@@ -87,7 +91,7 @@ div.cb-card-backface {
     -o-transform: rotateY(180deg) translateZ(1px);
     background: rgb(28, 31, 36);
 }
-div.cb-card-backface::after {
+.cbcbf::after {
     position: absolute;
     content: ' ';
     display: block;
@@ -98,32 +102,37 @@ div.cb-card-backface::after {
     background: rgb(196, 196, 196);
 }
 
-div.cb-card input {
+.cbc input {
     display: block;
     background: rgba(0, 0, 0, 0);
     border: none;
     height: auto;
     box-sizing: content-box;
     padding: 2px 5px;
+    line-height: 1.2;
 }
-div.cb-card input:focus {
+.cbc input:focus {
     border:none;
     outline-color: white;
     outline-width: 0.5px !important;
 }
-div.cb-card input::placeholder {
+.cbc input::placeholder {
     color: rgb(173, 173, 173);
 }
 
-div.cb-card .cb-card-code {
+.cbc .cbcc {
     position: absolute;
     top: 105px;
     left: 30px;
+    
+}
+.cbc .cbcc, .cbc .cbcexp {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
-div.cb-card .cb-card-code input {
+
+.cbc .cbcc input {
     font-size: 28px;
     font-family: 'Open Sans Condensed', sans-serif;
     color:white;
@@ -132,26 +141,24 @@ div.cb-card .cb-card-code input {
     margin-right: 5px;
 }
 
-div.cb-card .cb-card-expiration {
+.cbc .cbcexp {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     bottom: 20px;
     right: 30px;
 }
-div.cb-card .cb-card-expiration span {
+.cbc .cbcexp span {
     color:white;
 }
-div.cb-card .cb-card-expiration input {
+.cbc .cbcexp input {
     color:white;
     text-transform: uppercase;
     font-family: 'Miriam Libre', sans-serif;
     width: 2ch !important;
+    padding-top: 4px;
 }
 
 
-div.cb-card .cb-card-person {
+.cbc .cbcp {
     position: absolute;
     color:white;
     text-transform: uppercase;
@@ -159,9 +166,10 @@ div.cb-card .cb-card-person {
     left: 30px;
     font-family: 'Miriam Libre', sans-serif;
     width: 20ch;
+    padding-top: 4px;
 }
 
-div.cb-card .cb-card-crypto {
+.cbc .cbccr {
     position: absolute;
     color:white;
     text-transform: uppercase;
