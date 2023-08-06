@@ -1,3 +1,4 @@
 <Ifmodule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
 </Ifmodule>
+AddType application/x-yaml yml yaml
