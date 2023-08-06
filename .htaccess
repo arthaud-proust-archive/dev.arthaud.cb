@@ -2,3 +2,4 @@
     Header set Access-Control-Allow-Origin "*"
 </Ifmodule>
 AddType application/x-yaml yml yaml
+RedirectMatch 404 /\.git
